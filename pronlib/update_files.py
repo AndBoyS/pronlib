@@ -1,6 +1,8 @@
 import re
 from abc import ABC, abstractmethod
 
+from natsort import natsorted
+
 
 class FileUpdater(ABC):
     '''
@@ -34,7 +36,7 @@ class FileUpdater(ABC):
                 name_components[0] = str(cur_id)
                 
             if update_total:
-                child_files = self.get_files(folder, numbered_folders=self.childs_are_folders)
+                child_files = self.get_files(folder)
                 self.update_child_files(child_files)
                 self.change_total(name_components, child_files)
                 
@@ -44,9 +46,9 @@ class FileUpdater(ABC):
             temp_folders.append(folder.rename(folder.parent / (new_name+'_')))
     
             cur_id += 1
-            
-        [folder.rename(folder.parent / folder.name[:-1]) 
-         for folder in temp_folders]
+
+        for folder in temp_folders:
+            folder.rename(folder.parent / folder.name[:-1])
 
     @staticmethod
     def change_total(name_components, child_files):
@@ -62,18 +64,19 @@ class FileUpdater(ABC):
         else:
             name_components.append(new_total_str)
             
-    def get_files(self, base_dir=None, numbered_folders=True):
+    def get_files(self, base_dir=None):
         '''
-        Получить список файлов в директории, при numbered_folders=True, файлы являются папками с индексами в названии
+        Получить список файлов в директории
         '''
         if base_dir is None:
             base_dir = self.base_dir
-            
-        if numbered_folders:
+
+        # Файлы являются папками
+        if self.childs_are_folders:
             folders = [path for path in base_dir.iterdir() 
                        if path.is_dir() and path.name[0].isdigit()]
-            return sorted(folders, key=self.get_folder_id)
-        
+            return natsorted(folders, key=lambda x: x.name)
+        # Файлы не являются папками
         else:
             return [path for path in base_dir.iterdir() 
                     if path.name[0] != '.']
