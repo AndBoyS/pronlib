@@ -1,13 +1,21 @@
 import re
+from abc import ABC, abstractmethod
 
 
-class FileUpdater:
+class FileUpdater(ABC):
     '''
     Обновляет индексы и счетчики в названиях папок
     '''
-    def __init__(self, base_dir):
+
+    childs_are_folders = None  # Должно быть определено наследующим классом
+
+    def __init__(self, base_dir, start_index=0):
+        '''
+        start_index - с какого индекса начинается нумерация основных папок
+        '''
         self.base_dir = base_dir
         self.main_folders = self.get_files(base_dir)
+        self.start_index = start_index
     
     def update(self, folders=None, start_index=None, update_total=True):
         
@@ -39,8 +47,9 @@ class FileUpdater:
             
         [folder.rename(folder.parent / folder.name[:-1]) 
          for folder in temp_folders]
-        
-    def change_total(self, name_components, child_files):
+
+    @staticmethod
+    def change_total(name_components, child_files):
         '''
         Изменяет/добавляет последнюю строку в списке name_components, обозначающей колво файлов внутри папки (child_files - файлы папки)
         '''
@@ -72,11 +81,14 @@ class FileUpdater:
     @staticmethod
     def get_folder_id(folder):
         return int(folder.name.split()[0])
+
+    @abstractmethod
+    def update_child_files(self, child_files):
+        pass
             
             
 class PhotoUpdater(FileUpdater):
-    
-    start_index = 0  # Нумерация папок начинается с нуля
+
     childs_are_folders = True  # Файлы внутри папок тоже являются папками
     
     def update_child_files(self, child_files):
@@ -90,9 +102,9 @@ class VideoUpdater(FileUpdater):
     childs_are_folders = False
     
     def __init__(self, base_dir, photos_dir):
-        super().__init__(base_dir)
-        self.start_index = len(self.get_files(photos_dir))
-        
+        start_index = len(self.get_files(photos_dir))
+        super().__init__(base_dir, start_index=start_index)
+
     def update_child_files(self, child_files):
         pass
         
