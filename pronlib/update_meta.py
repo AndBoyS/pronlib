@@ -1,3 +1,4 @@
+from typing import *
 import re
 import json
 from pathlib import Path
@@ -47,14 +48,14 @@ def update_meta_files(base_folder: Path, summary_path='summary.txt'):
         f.write(summary)
 
 
-def load_json(fp: Path):
+def load_json(fp: Union[Path, str]):
     with open(fp, 'r') as f:
         return json.load(f)
 
 
-def dump_json(obj, fp: Path):
-    with open(fp, 'w') as f:
-        json.dump(obj, f)
+def dump_json(obj, fp: Union[Path, str]):
+    with open(fp, 'w', encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False)
 
 
 def get_set_meta_data(folder: Path, re_pattern) -> (str, str):
@@ -71,6 +72,11 @@ def get_set_meta_data(folder: Path, re_pattern) -> (str, str):
     if not list(folder.glob('meta.json')):
 
         meta_artist = extract_artist_from_folder_name(folder_name)
+
+        # Если в названии папки есть имя художника
+        # убираем его из названия
+        if meta_artist is not None:
+            folder_name = re.sub(r'\['+'meta_artist'+r']', '', folder_name).strip()
 
         meta_data = {'name': folder_name,
                      'artist': meta_artist}
@@ -107,6 +113,8 @@ def extract_artist_from_folder_name(folder_name: str):
 
 def update_random_file(photos_dir, videos_dir, file_path='sauce.json'):
     folders = list(photos_dir.glob('*')) + list(videos_dir.glob('*'))
+    folders = natsorted(folders, key=lambda x: x.name)
+
     folder_to_random = {}
     for folder in folders:
         if 'Archive' in folder.name:
@@ -122,5 +130,4 @@ def update_random_file(photos_dir, videos_dir, file_path='sauce.json'):
         category_number = int(category_match.group(2))
         folder_to_random[category_name] = category_number
 
-    with open(file_path, 'w') as f:
-        json.dump(folder_to_random, f)
+    dump_json(folder_to_random, file_path)
