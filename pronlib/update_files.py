@@ -82,11 +82,12 @@ class FileUpdater(ABC):
         if childs_are_folders:
             folders = [path for path in base_dir.iterdir() 
                        if path.is_dir()]
-            return natsorted(folders, key=lambda x: x.name)
         # Файлы не являются папками
         else:
-            return [path for path in base_dir.iterdir() 
-                    if path.name[0] != '.']
+            folders = [path for path in base_dir.iterdir()
+                       if path.name[0] != '.']
+
+        return natsorted(folders, key=lambda x: x.name)
     
     @staticmethod
     def get_folder_id(folder):
@@ -116,7 +117,7 @@ class VideoUpdater(FileUpdater):
         super().__init__(base_dir, start_index=start_index)
 
     def update_child_files(self, child_files):
-        pass
+        pass  # Для видео нет вложенности папок
         
 
 
