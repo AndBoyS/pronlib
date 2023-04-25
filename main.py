@@ -5,7 +5,7 @@ from pronlib.update_meta import update_meta_files, update_random_file
 
 
 def main():
-    base_dir = Path().resolve().parent
+    base_dir = Path().resolve().parent / '[Content]'
     photos_dir = base_dir / 'Photos'
     videos_dir = base_dir / 'Videos'
 
