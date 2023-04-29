@@ -30,7 +30,7 @@ def get_subfolders(folder: Path):
                      key=lambda x: x.name)
 
 
-def update_meta_files(base_folder: Path, summary_path='summary.md'):
+def update_meta_files(base_folder: Path, summary_path='README.md'):
     '''
     Создает/обновляет файлы meta.json в подпапках (таргет: Photos)
     '''
@@ -86,20 +86,22 @@ def update_meta_files(base_folder: Path, summary_path='summary.md'):
     for i, folder_data in enumerate(folder_datas, start=1):
         folder_name = folder_data['folder_name']
         subfolders_data = folder_data['subfolders_data']
-        folder_name = ' '.join(folder_name.split()[1:])
+
+        folder_name = re.sub(r'^\d+ ', '', folder_name)
         summary += f'{i}. **{folder_name}** \n'
 
         for subfolder_data in subfolders_data:
             subfolder_name = subfolder_data['subfolder_name']
+            subfolder_name = re.sub(r'^\d+ ', '', subfolder_name)
             artists = subfolder_data['artists']
             artist_str = ', '.join(
                 f'<span style="color:{artist_to_color[artist]}">{artist}</span>'
                 for artist in artists
             )
 
-            summary += f'{subfolder_name} - {artist_str} \n'
+            summary += f'\t1. {subfolder_name} - {artist_str} \n'
 
-    with open(base_folder / summary_path, 'w') as f:
+    with open(summary_path, 'w') as f:
         f.write(summary)
 
 
