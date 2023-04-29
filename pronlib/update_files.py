@@ -112,10 +112,6 @@ class VideoUpdater(FileUpdater):
     
     childs_are_folders = False
     
-    def __init__(self, base_dir, photos_dir):
-        start_index = len(self.get_files(photos_dir, childs_are_folders=True))
-        super().__init__(base_dir, start_index=start_index)
-
     def update_child_files(self, child_files):
         pass  # Для видео нет вложенности папок
         

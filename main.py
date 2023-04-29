@@ -10,7 +10,8 @@ def main():
     videos_dir = base_dir / 'Videos'
 
     photo_updater = PhotoUpdater(photos_dir)
-    video_updater = VideoUpdater(videos_dir, photos_dir)
+    video_start_index = len(photo_updater.get_files(photos_dir))
+    video_updater = VideoUpdater(videos_dir, video_start_index)
 
     photo_updater.update()
     video_updater.update()
