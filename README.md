@@ -1,113 +1,113 @@
 1. **Honoo Haramase Appli (5)** 
 2. **M1 (6)** 
-	1. Maoo Wonderful - <span style="color:black">Izumi Mahiru</span> 
-	1. Scarlet princess Rias Daisuki - <span style="color:black">Izumi Mahiru</span> 
-	1. Ikinari Kozukuri - <span style="color:purple">Goban</span> 
-	1. Hokorashiki Goshujin-sama - <span style="color:black">Morimoto Seina</span>, <span style="color:MediumPurple">Crowly</span> 
-	1. Gimme Attention! Doggy x2 Girls - <span style="color:brown">Minamino Sazan</span> 
-	1. Blossoming Sakura! - <span style="color:DarkBlue">Kakao</span> 
+	1. [Maoo Wonderful - <span style="color:black">Izumi Mahiru</span>](https://track24.ru/google/?q=Maoo%20Wonderful%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EIzumi%20Mahiru%3C/span%3E) 
+	1. [Scarlet princess Rias Daisuki - <span style="color:black">Izumi Mahiru</span>](https://track24.ru/google/?q=Scarlet%20princess%20Rias%20Daisuki%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EIzumi%20Mahiru%3C/span%3E) 
+	1. [Ikinari Kozukuri - <span style="color:purple">Goban</span>](https://track24.ru/google/?q=Ikinari%20Kozukuri%20-%20%3Cspan%20style%3D%22color%3Apurple%22%3EGoban%3C/span%3E) 
+	1. [Hokorashiki Goshujin-sama - <span style="color:black">Morimoto Seina</span>, <span style="color:MediumPurple">Crowly</span>](https://track24.ru/google/?q=Hokorashiki%20Goshujin-sama%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EMorimoto%20Seina%3C/span%3E%2C%20%3Cspan%20style%3D%22color%3AMediumPurple%22%3ECrowly%3C/span%3E) 
+	1. [Gimme Attention! Doggy x2 Girls - <span style="color:brown">Minamino Sazan</span>](https://track24.ru/google/?q=Gimme%20Attention%21%20Doggy%20x2%20Girls%20-%20%3Cspan%20style%3D%22color%3Abrown%22%3EMinamino%20Sazan%3C/span%3E) 
+	1. [Blossoming Sakura! - <span style="color:DarkBlue">Kakao</span>](https://track24.ru/google/?q=Blossoming%20Sakura%21%20-%20%3Cspan%20style%3D%22color%3ADarkBlue%22%3EKakao%3C/span%3E) 
 3. **M2 (6)** 
-	1. Man x Koi - <span style="color:black">Hinotsuki Neko</span> 
-	1. Masou Gakuen HxH - <span style="color:black">Kuji Masamune</span> 
-	1. Maid in Enterprise (Azur Lane) - <span style="color:black">Ponkotsu Works</span> 
-	1. Real Intention - <span style="color:orange">Suzutsuki Kurara</span> 
-	1. Hayase-senpai and Her Alluring Legs - <span style="color:DarkBlue">Kakao</span> 
-	1. Evolution of Morisummer - <span style="color:orange">Suzutsuki Kurara</span> 
+	1. [Man x Koi - <span style="color:black">Hinotsuki Neko</span>](https://track24.ru/google/?q=Man%20x%20Koi%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EHinotsuki%20Neko%3C/span%3E) 
+	1. [Masou Gakuen HxH - <span style="color:black">Kuji Masamune</span>](https://track24.ru/google/?q=Masou%20Gakuen%20HxH%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EKuji%20Masamune%3C/span%3E) 
+	1. [Maid in Enterprise (Azur Lane) - <span style="color:black">Ponkotsu Works</span>](https://track24.ru/google/?q=Maid%20in%20Enterprise%20%28Azur%20Lane%29%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EPonkotsu%20Works%3C/span%3E) 
+	1. [Real Intention - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=Real%20Intention%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
+	1. [Hayase-senpai and Her Alluring Legs - <span style="color:DarkBlue">Kakao</span>](https://track24.ru/google/?q=Hayase-senpai%20and%20Her%20Alluring%20Legs%20-%20%3Cspan%20style%3D%22color%3ADarkBlue%22%3EKakao%3C/span%3E) 
+	1. [Evolution of Morisummer - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=Evolution%20of%20Morisummer%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
 4. **M3 (6)** 
-	1. Tennen Tenshi no XX Ressun - <span style="color:orange">Suzutsuki Kurara</span> 
-	1. Chichi Iro Toiki - <span style="color:purple">Goban</span> 
-	1. Chichi Iro Toiki 2 - <span style="color:purple">Goban</span> 
-	1. Chichi Iro Toiki 3 - <span style="color:purple">Goban</span> 
-	1. Chichi Iro Toiki 4 - <span style="color:purple">Goban</span> 
-	1. A Mature Confession [Shibananasei] - <span style="color:black">Shibananasei</span> 
+	1. [Tennen Tenshi no XX Ressun - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=Tennen%20Tenshi%20no%20XX%20Ressun%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
+	1. [Chichi Iro Toiki - <span style="color:purple">Goban</span>](https://track24.ru/google/?q=Chichi%20Iro%20Toiki%20-%20%3Cspan%20style%3D%22color%3Apurple%22%3EGoban%3C/span%3E) 
+	1. [Chichi Iro Toiki 2 - <span style="color:purple">Goban</span>](https://track24.ru/google/?q=Chichi%20Iro%20Toiki%202%20-%20%3Cspan%20style%3D%22color%3Apurple%22%3EGoban%3C/span%3E) 
+	1. [Chichi Iro Toiki 3 - <span style="color:purple">Goban</span>](https://track24.ru/google/?q=Chichi%20Iro%20Toiki%203%20-%20%3Cspan%20style%3D%22color%3Apurple%22%3EGoban%3C/span%3E) 
+	1. [Chichi Iro Toiki 4 - <span style="color:purple">Goban</span>](https://track24.ru/google/?q=Chichi%20Iro%20Toiki%204%20-%20%3Cspan%20style%3D%22color%3Apurple%22%3EGoban%3C/span%3E) 
+	1. [A Mature Confession [Shibananasei] - <span style="color:black">Shibananasei</span>](https://track24.ru/google/?q=A%20Mature%20Confession%20%5BShibananasei%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EShibananasei%3C/span%3E) 
 5. **М4 (6)** 
-	1. Sirius no Paizuri - <span style="color:MediumPurple">Crowly</span> 
-	1. Nyuunai Shabaora - <span style="color:MediumPurple">Crowly</span> 
-	1. Tsuyo Kosu Advanced - <span style="color:black">Pierre Yoshio</span> 
-	1. Budding Cool Girl - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Jerk Off to Shirasaka-sensei! - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. ToroToro BaniBani Horny Bunny [Akitsuki Karasu] - <span style="color:black">Akitsuki Karasu</span> 
+	1. [Sirius no Paizuri - <span style="color:MediumPurple">Crowly</span>](https://track24.ru/google/?q=Sirius%20no%20Paizuri%20-%20%3Cspan%20style%3D%22color%3AMediumPurple%22%3ECrowly%3C/span%3E) 
+	1. [Nyuunai Shabaora - <span style="color:MediumPurple">Crowly</span>](https://track24.ru/google/?q=Nyuunai%20Shabaora%20-%20%3Cspan%20style%3D%22color%3AMediumPurple%22%3ECrowly%3C/span%3E) 
+	1. [Tsuyo Kosu Advanced - <span style="color:black">Pierre Yoshio</span>](https://track24.ru/google/?q=Tsuyo%20Kosu%20Advanced%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EPierre%20Yoshio%3C/span%3E) 
+	1. [Budding Cool Girl - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Budding%20Cool%20Girl%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Jerk Off to Shirasaka-sensei! - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Jerk%20Off%20to%20Shirasaka-sensei%21%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [ToroToro BaniBani Horny Bunny [Akitsuki Karasu] - <span style="color:black">Akitsuki Karasu</span>](https://track24.ru/google/?q=ToroToro%20BaniBani%20Horny%20Bunny%20%5BAkitsuki%20Karasu%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAkitsuki%20Karasu%3C/span%3E) 
 6. **M5 (6)** 
-	1. Double Lesson Okawari - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Dual Shock - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Yum Yum Beach - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Namaiki Sugin zo Maid-sama - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Two Hunters - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. We Have Our Teacher!! - <span style="color:hotpink">Okumoto Yuuta</span> 
+	1. [Double Lesson Okawari - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Double%20Lesson%20Okawari%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Dual Shock - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Dual%20Shock%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Yum Yum Beach - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Yum%20Yum%20Beach%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Namaiki Sugin zo Maid-sama - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Namaiki%20Sugin%20zo%20Maid-sama%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Two Hunters - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Two%20Hunters%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [We Have Our Teacher!! - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=We%20Have%20Our%20Teacher%21%21%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
 7. **M6 (6)** 
-	1. ChichiKoi - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Cool na Asobi - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Through Submission - <span style="color:black">Ayakawa Riku</span> 
-	1. Chichi Koi! Oppai Emotion - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Giri Giri Sister - <span style="color:black">Pierre Yoshio</span> 
-	1. Romantic Etiquette for Dungeon Girls - Part 2 [Alto Seneka] - <span style="color:black">Alto Seneka</span> 
+	1. [ChichiKoi - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=ChichiKoi%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Cool na Asobi - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Cool%20na%20Asobi%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Through Submission - <span style="color:black">Ayakawa Riku</span>](https://track24.ru/google/?q=Through%20Submission%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAyakawa%20Riku%3C/span%3E) 
+	1. [Chichi Koi! Oppai Emotion - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Chichi%20Koi%21%20Oppai%20Emotion%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Giri Giri Sister - <span style="color:black">Pierre Yoshio</span>](https://track24.ru/google/?q=Giri%20Giri%20Sister%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EPierre%20Yoshio%3C/span%3E) 
+	1. [Romantic Etiquette for Dungeon Girls - Part 2 [Alto Seneka] - <span style="color:black">Alto Seneka</span>](https://track24.ru/google/?q=Romantic%20Etiquette%20for%20Dungeon%20Girls%20-%20Part%202%20%5BAlto%20Seneka%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAlto%20Seneka%3C/span%3E) 
 8. **M7 (6)** 
-	1. Nyuu Generation - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Nyuu Generation - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. A Book Where Sanzou-chan's - <span style="color:brown">Minamino Sazan</span> 
-	1. Sanzou-chan Lust Explosion - <span style="color:brown">Minamino Sazan</span> 
-	1. Koizome Marking - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. Costte Mitai!! - <span style="color:hotpink">Okumoto Yuuta</span> 
+	1. [Nyuu Generation - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Nyuu%20Generation%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Nyuu Generation - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Nyuu%20Generation%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [A Book Where Sanzou-chan's - <span style="color:brown">Minamino Sazan</span>](https://track24.ru/google/?q=A%20Book%20Where%20Sanzou-chan%27s%20-%20%3Cspan%20style%3D%22color%3Abrown%22%3EMinamino%20Sazan%3C/span%3E) 
+	1. [Sanzou-chan Lust Explosion - <span style="color:brown">Minamino Sazan</span>](https://track24.ru/google/?q=Sanzou-chan%20Lust%20Explosion%20-%20%3Cspan%20style%3D%22color%3Abrown%22%3EMinamino%20Sazan%3C/span%3E) 
+	1. [Koizome Marking - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Koizome%20Marking%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [Costte Mitai!! - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Costte%20Mitai%21%21%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
 9. **M8 (6)** 
-	1. Open! Six-Boobie Island - <span style="color:brown">Minamino Sazan</span> 
-	1. Dangerous Interview! - <span style="color:hotpink">Okumoto Yuuta</span> 
-	1. My Neighbor Succubus-chan - <span style="color:pink">Derauea</span> 
-	1. Tonari no Succubus-chan Gaiden [Derauea] - <span style="color:pink">Derauea</span> 
-	1. My Neighbor Succubus-chan - <span style="color:pink">Derauea</span> 
-	1. My Neighbor Succubus-chan - <span style="color:pink">Derauea</span> 
+	1. [Open! Six-Boobie Island - <span style="color:brown">Minamino Sazan</span>](https://track24.ru/google/?q=Open%21%20Six-Boobie%20Island%20-%20%3Cspan%20style%3D%22color%3Abrown%22%3EMinamino%20Sazan%3C/span%3E) 
+	1. [Dangerous Interview! - <span style="color:hotpink">Okumoto Yuuta</span>](https://track24.ru/google/?q=Dangerous%20Interview%21%20-%20%3Cspan%20style%3D%22color%3Ahotpink%22%3EOkumoto%20Yuuta%3C/span%3E) 
+	1. [My Neighbor Succubus-chan - <span style="color:pink">Derauea</span>](https://track24.ru/google/?q=My%20Neighbor%20Succubus-chan%20-%20%3Cspan%20style%3D%22color%3Apink%22%3EDerauea%3C/span%3E) 
+	1. [Tonari no Succubus-chan Gaiden [Derauea] - <span style="color:pink">Derauea</span>](https://track24.ru/google/?q=Tonari%20no%20Succubus-chan%20Gaiden%20%5BDerauea%5D%20-%20%3Cspan%20style%3D%22color%3Apink%22%3EDerauea%3C/span%3E) 
+	1. [My Neighbor Succubus-chan - <span style="color:pink">Derauea</span>](https://track24.ru/google/?q=My%20Neighbor%20Succubus-chan%20-%20%3Cspan%20style%3D%22color%3Apink%22%3EDerauea%3C/span%3E) 
+	1. [My Neighbor Succubus-chan - <span style="color:pink">Derauea</span>](https://track24.ru/google/?q=My%20Neighbor%20Succubus-chan%20-%20%3Cspan%20style%3D%22color%3Apink%22%3EDerauea%3C/span%3E) 
 10. **M9 (6)** 
-	1. Tenshi no Inu Mani - <span style="color:orange">Suzutsuki Kurara</span> 
-	1. Tenshi no Inu Mani 2 - <span style="color:orange">Suzutsuki Kurara</span> 
-	1. Irregular Contact - <span style="color:orange">Suzutsuki Kurara</span> 
-	1. Momo Piyo - <span style="color:orange">Suzutsuki Kurara</span> 
-	1. P-mating - <span style="color:orange">Suzutsuki Kurara</span> 
-	1. Curse Eater Juso Kuraishi Ch. 1-2 [Rusty Soul] - <span style="color:black">Rusty Soul</span> 
+	1. [Tenshi no Inu Mani - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=Tenshi%20no%20Inu%20Mani%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
+	1. [Tenshi no Inu Mani 2 - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=Tenshi%20no%20Inu%20Mani%202%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
+	1. [Irregular Contact - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=Irregular%20Contact%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
+	1. [Momo Piyo - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=Momo%20Piyo%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
+	1. [P-mating - <span style="color:orange">Suzutsuki Kurara</span>](https://track24.ru/google/?q=P-mating%20-%20%3Cspan%20style%3D%22color%3Aorange%22%3ESuzutsuki%20Kurara%3C/span%3E) 
+	1. [Curse Eater Juso Kuraishi Ch. 1-2 [Rusty Soul] - <span style="color:black">Rusty Soul</span>](https://track24.ru/google/?q=Curse%20Eater%20Juso%20Kuraishi%20Ch.%201-2%20%5BRusty%20Soul%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ERusty%20Soul%3C/span%3E) 
 11. **M10 (6)** 
-	1. Flirty Lovin' with Suzuya! [Tonpuuratei] - <span style="color:black">Tonpuuratei</span> 
-	1. Hama-Pai [Shinozuka George] - <span style="color:black">Shinozuka George</span> 
-	1. I Want to Flirt With Suzuya!! [Tonpuuratei] - <span style="color:black">Tonpuuratei</span> 
-	1. Isuzu Breast Training Journal [Shinozuka George] - <span style="color:black">Shinozuka George</span> 
-	1. Shoukaku to Motto Motto Ichaicha Shitai!! [Tonpuuratei] - <span style="color:black">Tonpuuratei</span> 
-	1. Urapai [Shinozuka George] - <span style="color:black">Shinozuka George</span> 
+	1. [Flirty Lovin' with Suzuya! [Tonpuuratei] - <span style="color:black">Tonpuuratei</span>](https://track24.ru/google/?q=Flirty%20Lovin%27%20with%20Suzuya%21%20%5BTonpuuratei%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ETonpuuratei%3C/span%3E) 
+	1. [Hama-Pai [Shinozuka George] - <span style="color:black">Shinozuka George</span>](https://track24.ru/google/?q=Hama-Pai%20%5BShinozuka%20George%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EShinozuka%20George%3C/span%3E) 
+	1. [I Want to Flirt With Suzuya!! [Tonpuuratei] - <span style="color:black">Tonpuuratei</span>](https://track24.ru/google/?q=I%20Want%20to%20Flirt%20With%20Suzuya%21%21%20%5BTonpuuratei%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ETonpuuratei%3C/span%3E) 
+	1. [Isuzu Breast Training Journal [Shinozuka George] - <span style="color:black">Shinozuka George</span>](https://track24.ru/google/?q=Isuzu%20Breast%20Training%20Journal%20%5BShinozuka%20George%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EShinozuka%20George%3C/span%3E) 
+	1. [Shoukaku to Motto Motto Ichaicha Shitai!! [Tonpuuratei] - <span style="color:black">Tonpuuratei</span>](https://track24.ru/google/?q=Shoukaku%20to%20Motto%20Motto%20Ichaicha%20Shitai%21%21%20%5BTonpuuratei%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ETonpuuratei%3C/span%3E) 
+	1. [Urapai [Shinozuka George] - <span style="color:black">Shinozuka George</span>](https://track24.ru/google/?q=Urapai%20%5BShinozuka%20George%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EShinozuka%20George%3C/span%3E) 
 12. **M11 (6)** 
-	1. Houshi Katsudou Labor of Love [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span> 
-	1. Maryoku Hokyuuchuu [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span> 
-	1. Maryoku Shibori [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span> 
-	1. Saimin Gohoushi [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span> 
-	1. Seikatsu Shuukan 1 [Michiking] - <span style="color:black">Michiking</span> 
-	1. Seikatsu Shuukan 2 [Michiking] - <span style="color:black">Michiking</span> 
+	1. [Houshi Katsudou Labor of Love [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span>](https://track24.ru/google/?q=Houshi%20Katsudou%20Labor%20of%20Love%20%5BYuKi-IRo%5D%20-%20%3Cspan%20style%3D%22color%3Acrimson%22%3EYuki-Iro%3C/span%3E) 
+	1. [Maryoku Hokyuuchuu [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span>](https://track24.ru/google/?q=Maryoku%20Hokyuuchuu%20%5BYuKi-IRo%5D%20-%20%3Cspan%20style%3D%22color%3Acrimson%22%3EYuki-Iro%3C/span%3E) 
+	1. [Maryoku Shibori [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span>](https://track24.ru/google/?q=Maryoku%20Shibori%20%5BYuKi-IRo%5D%20-%20%3Cspan%20style%3D%22color%3Acrimson%22%3EYuki-Iro%3C/span%3E) 
+	1. [Saimin Gohoushi [YuKi-IRo] - <span style="color:crimson">Yuki-Iro</span>](https://track24.ru/google/?q=Saimin%20Gohoushi%20%5BYuKi-IRo%5D%20-%20%3Cspan%20style%3D%22color%3Acrimson%22%3EYuki-Iro%3C/span%3E) 
+	1. [Seikatsu Shuukan 1 [Michiking] - <span style="color:black">Michiking</span>](https://track24.ru/google/?q=Seikatsu%20Shuukan%201%20%5BMichiking%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EMichiking%3C/span%3E) 
+	1. [Seikatsu Shuukan 2 [Michiking] - <span style="color:black">Michiking</span>](https://track24.ru/google/?q=Seikatsu%20Shuukan%202%20%5BMichiking%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EMichiking%3C/span%3E) 
 13. **M12 (6)** 
-	1. Isekai Elf Hatsujou no Magan 2 -Makyou Hen- [Aigamodou] - <span style="color:black">Aigamodou</span> 
-	1. Isekai Elf Hatsujou no Magan 3 [Aigamodou] - <span style="color:black">Aigamodou</span> 
-	1. Isekai Elf Hatsujou no Magan Horny Isekai Elf's Evil Eye [Aigamodou] - <span style="color:black">Aigamodou</span> 
-	1. Superbia no Amai Yoru [Akahito] - <span style="color:black">Akahito</span> 
-	1. Superbia's Sweet Night 2 [Akahito] - <span style="color:black">Akahito</span> 
-	1. Beachside Angel [kakao] - <span style="color:DarkBlue">Kakao</span> 
+	1. [Isekai Elf Hatsujou no Magan 2 -Makyou Hen- [Aigamodou] - <span style="color:black">Aigamodou</span>](https://track24.ru/google/?q=Isekai%20Elf%20Hatsujou%20no%20Magan%202%20-Makyou%20Hen-%20%5BAigamodou%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAigamodou%3C/span%3E) 
+	1. [Isekai Elf Hatsujou no Magan 3 [Aigamodou] - <span style="color:black">Aigamodou</span>](https://track24.ru/google/?q=Isekai%20Elf%20Hatsujou%20no%20Magan%203%20%5BAigamodou%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAigamodou%3C/span%3E) 
+	1. [Isekai Elf Hatsujou no Magan Horny Isekai Elf's Evil Eye [Aigamodou] - <span style="color:black">Aigamodou</span>](https://track24.ru/google/?q=Isekai%20Elf%20Hatsujou%20no%20Magan%20Horny%20Isekai%20Elf%27s%20Evil%20Eye%20%5BAigamodou%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAigamodou%3C/span%3E) 
+	1. [Superbia no Amai Yoru [Akahito] - <span style="color:black">Akahito</span>](https://track24.ru/google/?q=Superbia%20no%20Amai%20Yoru%20%5BAkahito%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAkahito%3C/span%3E) 
+	1. [Superbia's Sweet Night 2 [Akahito] - <span style="color:black">Akahito</span>](https://track24.ru/google/?q=Superbia%27s%20Sweet%20Night%202%20%5BAkahito%5D%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EAkahito%3C/span%3E) 
+	1. [Beachside Angel [kakao] - <span style="color:DarkBlue">Kakao</span>](https://track24.ru/google/?q=Beachside%20Angel%20%5Bkakao%5D%20-%20%3Cspan%20style%3D%22color%3ADarkBlue%22%3EKakao%3C/span%3E) 
 14. **M13 (6)** 
-	1. [Ouma Tokiichi] Aya shibori - <span style="color:LightSlateGrey">Ouma Tokiichi</span> 
-	1. [Ouma Tokiichi] Shuumatsu Koibito Yukarin - <span style="color:LightSlateGrey">Ouma Tokiichi</span> 
-	1. [Ouma Tokiichi] Yuyukon - Yuyuko-sama to Mecha Love Shinkon Seikatsu - <span style="color:LightSlateGrey">Ouma Tokiichi</span> 
-	1. [Ouma Tokiichi] ゆゆしとね - <span style="color:LightSlateGrey">Ouma Tokiichi</span> 
-	1. [Tottoko Mtarou] Strength and III - <span style="color:black">Tottoko Mtarou</span> 
-	1. [Tousen] Reality Shock - <span style="color:black">Tousen</span> 
+	1. [[Ouma Tokiichi] Aya shibori - <span style="color:LightSlateGrey">Ouma Tokiichi</span>](https://track24.ru/google/?q=%5BOuma%20Tokiichi%5D%20Aya%20shibori%20-%20%3Cspan%20style%3D%22color%3ALightSlateGrey%22%3EOuma%20Tokiichi%3C/span%3E) 
+	1. [[Ouma Tokiichi] Shuumatsu Koibito Yukarin - <span style="color:LightSlateGrey">Ouma Tokiichi</span>](https://track24.ru/google/?q=%5BOuma%20Tokiichi%5D%20Shuumatsu%20Koibito%20Yukarin%20-%20%3Cspan%20style%3D%22color%3ALightSlateGrey%22%3EOuma%20Tokiichi%3C/span%3E) 
+	1. [[Ouma Tokiichi] Yuyukon - Yuyuko-sama to Mecha Love Shinkon Seikatsu - <span style="color:LightSlateGrey">Ouma Tokiichi</span>](https://track24.ru/google/?q=%5BOuma%20Tokiichi%5D%20Yuyukon%20-%20Yuyuko-sama%20to%20Mecha%20Love%20Shinkon%20Seikatsu%20-%20%3Cspan%20style%3D%22color%3ALightSlateGrey%22%3EOuma%20Tokiichi%3C/span%3E) 
+	1. [[Ouma Tokiichi] ゆゆしとね - <span style="color:LightSlateGrey">Ouma Tokiichi</span>](https://track24.ru/google/?q=%5BOuma%20Tokiichi%5D%20%E3%82%86%E3%82%86%E3%81%97%E3%81%A8%E3%81%AD%20-%20%3Cspan%20style%3D%22color%3ALightSlateGrey%22%3EOuma%20Tokiichi%3C/span%3E) 
+	1. [[Tottoko Mtarou] Strength and III - <span style="color:black">Tottoko Mtarou</span>](https://track24.ru/google/?q=%5BTottoko%20Mtarou%5D%20Strength%20and%20III%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ETottoko%20Mtarou%3C/span%3E) 
+	1. [[Tousen] Reality Shock - <span style="color:black">Tousen</span>](https://track24.ru/google/?q=%5BTousen%5D%20Reality%20Shock%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ETousen%3C/span%3E) 
 15. **M14 (6)** 
-	1. [Tsukitokage] Gratified Mastery - <span style="color:black">Tsukitokage</span> 
-	1. [Yahiro Pochi] Secret - <span style="color:black">Yahiro Pochi</span> 
-	1. [Yahiro Pochi] Sex Practice - <span style="color:black">Yahiro Pochi</span> 
-	1. [Yukiusagi ] Dwarf Musume Choukyou Kiroku - <span style="color:black">Yukiusagi </span> 
-	1. [Kasukabe Taro] Trouble★Teachers Vol. 2 - <span style="color:black">Kasukabe Taro</span> 
-	1. [Kasukabe Taro] Trouble★Teachers Vol. 3 - <span style="color:black">Kasukabe Taro</span> 
+	1. [[Tsukitokage] Gratified Mastery - <span style="color:black">Tsukitokage</span>](https://track24.ru/google/?q=%5BTsukitokage%5D%20Gratified%20Mastery%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ETsukitokage%3C/span%3E) 
+	1. [[Yahiro Pochi] Secret - <span style="color:black">Yahiro Pochi</span>](https://track24.ru/google/?q=%5BYahiro%20Pochi%5D%20Secret%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EYahiro%20Pochi%3C/span%3E) 
+	1. [[Yahiro Pochi] Sex Practice - <span style="color:black">Yahiro Pochi</span>](https://track24.ru/google/?q=%5BYahiro%20Pochi%5D%20Sex%20Practice%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EYahiro%20Pochi%3C/span%3E) 
+	1. [[Yukiusagi ] Dwarf Musume Choukyou Kiroku - <span style="color:black">Yukiusagi </span>](https://track24.ru/google/?q=%5BYukiusagi%20%5D%20Dwarf%20Musume%20Choukyou%20Kiroku%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EYukiusagi%20%3C/span%3E) 
+	1. [[Kasukabe Taro] Trouble★Teachers Vol. 2 - <span style="color:black">Kasukabe Taro</span>](https://track24.ru/google/?q=%5BKasukabe%20Taro%5D%20Trouble%E2%98%85Teachers%20Vol.%202%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EKasukabe%20Taro%3C/span%3E) 
+	1. [[Kasukabe Taro] Trouble★Teachers Vol. 3 - <span style="color:black">Kasukabe Taro</span>](https://track24.ru/google/?q=%5BKasukabe%20Taro%5D%20Trouble%E2%98%85Teachers%20Vol.%203%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EKasukabe%20Taro%3C/span%3E) 
 16. **M15 (7)** 
-	1. [Derauea] Tonari no Succubus-chan - <span style="color:pink">Derauea</span> 
-	1. [Ichinose Land] Narmaya & Jeanne to Dokidoki Summer Vacation Narmaya & Jeanne's Passionate Summer - <span style="color:black">Ichinose Land</span> 
-	1. [Ninokoya] Elf ni Inmon o Tsukeru Hon LEVEL 1 - <span style="color:MediumSeaGreen">Ninokoya</span> 
-	1. [Ninokoya] Elf ni Inmon o Tsukeru Hon LEVEL 2 - <span style="color:MediumSeaGreen">Ninokoya</span> 
-	1. [Ninokoya] Elf ni Inmon o Tsukeru Hon LEVEL 5 - <span style="color:MediumSeaGreen">Ninokoya</span> 
-	1. [Ninokoya] Shoujo Kaishun 5 - <span style="color:MediumSeaGreen">Ninokoya</span> 
-	1. [Tamagobou] Rengou Kantai Kikan no Oyome-san - <span style="color:black">Tamagobou</span> 
+	1. [[Derauea] Tonari no Succubus-chan - <span style="color:pink">Derauea</span>](https://track24.ru/google/?q=%5BDerauea%5D%20Tonari%20no%20Succubus-chan%20-%20%3Cspan%20style%3D%22color%3Apink%22%3EDerauea%3C/span%3E) 
+	1. [[Ichinose Land] Narmaya & Jeanne to Dokidoki Summer Vacation Narmaya & Jeanne's Passionate Summer - <span style="color:black">Ichinose Land</span>](https://track24.ru/google/?q=%5BIchinose%20Land%5D%20Narmaya%20%26%20Jeanne%20to%20Dokidoki%20Summer%20Vacation%20Narmaya%20%26%20Jeanne%27s%20Passionate%20Summer%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EIchinose%20Land%3C/span%3E) 
+	1. [[Ninokoya] Elf ni Inmon o Tsukeru Hon LEVEL 1 - <span style="color:MediumSeaGreen">Ninokoya</span>](https://track24.ru/google/?q=%5BNinokoya%5D%20Elf%20ni%20Inmon%20o%20Tsukeru%20Hon%20LEVEL%201%20-%20%3Cspan%20style%3D%22color%3AMediumSeaGreen%22%3ENinokoya%3C/span%3E) 
+	1. [[Ninokoya] Elf ni Inmon o Tsukeru Hon LEVEL 2 - <span style="color:MediumSeaGreen">Ninokoya</span>](https://track24.ru/google/?q=%5BNinokoya%5D%20Elf%20ni%20Inmon%20o%20Tsukeru%20Hon%20LEVEL%202%20-%20%3Cspan%20style%3D%22color%3AMediumSeaGreen%22%3ENinokoya%3C/span%3E) 
+	1. [[Ninokoya] Elf ni Inmon o Tsukeru Hon LEVEL 5 - <span style="color:MediumSeaGreen">Ninokoya</span>](https://track24.ru/google/?q=%5BNinokoya%5D%20Elf%20ni%20Inmon%20o%20Tsukeru%20Hon%20LEVEL%205%20-%20%3Cspan%20style%3D%22color%3AMediumSeaGreen%22%3ENinokoya%3C/span%3E) 
+	1. [[Ninokoya] Shoujo Kaishun 5 - <span style="color:MediumSeaGreen">Ninokoya</span>](https://track24.ru/google/?q=%5BNinokoya%5D%20Shoujo%20Kaishun%205%20-%20%3Cspan%20style%3D%22color%3AMediumSeaGreen%22%3ENinokoya%3C/span%3E) 
+	1. [[Tamagobou] Rengou Kantai Kikan no Oyome-san - <span style="color:black">Tamagobou</span>](https://track24.ru/google/?q=%5BTamagobou%5D%20Rengou%20Kantai%20Kikan%20no%20Oyome-san%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3ETamagobou%3C/span%3E) 
 17. **Shinmai 1 (5)** 
 18. **Shinmai 2 (6)** 
 19. **Honoo Isekai (6)** 
 20. **Honoo Chou Appli (6)** 
 21. **Honoo Succubus (6)** 
-	1. Lovely x Cation 2 - <span style="color:black">Iizuki Tasuku</span> 
+	1. [Lovely x Cation 2 - <span style="color:black">Iizuki Tasuku</span>](https://track24.ru/google/?q=Lovely%20x%20Cation%202%20-%20%3Cspan%20style%3D%22color%3Ablack%22%3EIizuki%20Tasuku%3C/span%3E) 

@@ -3,6 +3,7 @@ import re
 import json
 from pathlib import Path
 from collections import Counter, defaultdict
+from urllib.parse import quote
 
 from natsort import natsorted
 
@@ -99,7 +100,9 @@ def update_meta_files(base_folder: Path, summary_path='README.md'):
                 for artist in artists
             )
 
-            summary += f'\t1. {subfolder_name} - {artist_str} \n'
+            summary_name = f'{subfolder_name} - {artist_str}'
+            google_link = f'https://track24.ru/google/?q={quote(summary_name)}'
+            summary += f'\t1. [{summary_name}]({google_link}) \n'
 
     with open(summary_path, 'w') as f:
         f.write(summary)
