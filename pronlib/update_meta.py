@@ -2,6 +2,8 @@ from typing import *
 import re
 import json
 from pathlib import Path
+from collections import Counter, defaultdict
+
 from natsort import natsorted
 
 # 69 Aboba (5)
@@ -9,13 +11,26 @@ folder_name_pattern = re.compile(r'\d+ (.+) \(\d+\)')
 # 69 Aboba
 subfolder_name_pattern = re.compile(r'\d+ (.+)')
 
+unique_colors = [
+    'hotpink',
+    'orange',
+    'purple',
+    'pink',
+    'brown',
+    'crimson',
+    'LightSlateGrey',
+    'MediumSeaGreen',
+    'MediumPurple',
+    'DarkBlue',
+]
+
 
 def get_subfolders(folder: Path):
     return natsorted([path for path in folder.glob('*') if path.is_dir()], 
                      key=lambda x: x.name)
 
 
-def update_meta_files(base_folder: Path, summary_path='summary.txt'):
+def update_meta_files(base_folder: Path, summary_path='summary.md'):
     '''
     Создает/обновляет файлы meta.json в подпапках (таргет: Photos)
     '''
@@ -23,7 +38,10 @@ def update_meta_files(base_folder: Path, summary_path='summary.txt'):
     
     summary = ''
 
-    for folder in folders:
+    folder_datas = []
+    all_artists = []
+
+    for i, folder in enumerate(folders):
         if 'Archive' in folder.name or not re.match(r'\d', folder.name):
             continue
 
@@ -33,7 +51,10 @@ def update_meta_files(base_folder: Path, summary_path='summary.txt'):
         if does_have_blank_names:
             get_set_meta_data(folder, folder_name_pattern)
 
-        summary += ' '.join([folder.name, '\n'])
+        data = {
+            'folder_name': folder.name,
+            'subfolders_data': []
+        }
 
         for subfolder in subfolders:
 
@@ -42,7 +63,41 @@ def update_meta_files(base_folder: Path, summary_path='summary.txt'):
             if not re.match(r'\d+$', subfolder_name):
                 name, artist = get_set_meta_data(subfolder, subfolder_name_pattern)
                 if name:
-                    summary += '\t' + ' '.join([name, '-', artist, '\n'])
+
+                    artists = artist.title().split(', ')
+
+                    data['subfolders_data'].append({
+                        'subfolder_name': subfolder_name,
+                        'artists': artists,
+                    })
+
+                    all_artists.extend(artists)
+
+        folder_datas.append(data)
+
+    artist_to_count = Counter(all_artists)
+    top_artists_counter = artist_to_count.most_common(len(unique_colors))
+    artist_to_color = {
+        artist: color
+        for (artist, _), color in zip(top_artists_counter, unique_colors)
+    }
+    artist_to_color = defaultdict(lambda: 'black', artist_to_color)
+
+    for i, folder_data in enumerate(folder_datas, start=1):
+        folder_name = folder_data['folder_name']
+        subfolders_data = folder_data['subfolders_data']
+        folder_name = ' '.join(folder_name.split()[1:])
+        summary += f'{i}. **{folder_name}** \n'
+
+        for subfolder_data in subfolders_data:
+            subfolder_name = subfolder_data['subfolder_name']
+            artists = subfolder_data['artists']
+            artist_str = ', '.join(
+                f'<span style="color:{artist_to_color[artist]}">{artist}</span>'
+                for artist in artists
+            )
+
+            summary += f'{subfolder_name} - {artist_str} \n'
 
     with open(base_folder / summary_path, 'w') as f:
         f.write(summary)
