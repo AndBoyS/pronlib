@@ -4,6 +4,54 @@ from abc import ABC, abstractmethod
 from natsort import natsorted
 
 
+class FolderName:
+
+    def __init__(self, folder_name: str):
+        folder_name = folder_name.strip('_ ')
+
+        match = re.match(r'\d+', folder_name)
+        assert match is not None, f'Didnt find index in folder: {folder_name}'
+        index = int(match.group(0))
+        folder_name = folder_name[match.end():].strip()
+
+        total = None
+        match = re.search(r'\(\d+\)', folder_name)
+        if match:
+            total = int(match.group(0)[1:-1])
+            folder_name = folder_name[:match.start()].strip()
+
+        match = re.search(r'\[.+?\]', folder_name)
+        artist = None
+        if match:
+            artist = match.group(0)[1:-1]
+            folder_name = folder_name[:match.start()].strip()
+
+        title = folder_name.strip()
+
+        self.index: int = index
+        self.title: str = title
+        self.artist: str = artist
+        self.total: int = total
+
+    def __str__(self):
+        title = ''
+        if self.title:
+            title = f' {self.title}'
+
+        artist = ''
+        if self.artist:
+            artist = f' [{self.artist}]'
+
+        total = ''
+        if self.total:
+            total = f' ({self.total})'
+
+        return f'{self.index}{title}{artist}{total}'
+
+    def __repr__(self):
+        return f'FolderName({str(self)})'
+
+
 class FileUpdater(ABC):
     '''
     Обновляет индексы и счетчики в названиях папок
@@ -16,7 +64,7 @@ class FileUpdater(ABC):
         start_index - с какого индекса начинается нумерация основных папок
         '''
         self.base_dir = base_dir
-        self.main_folders = self.get_files(base_dir)
+        self.main_folders = self.get_subfolders(base_dir)
         self.start_index = start_index
     
     def update(self, folders=None, start_index=None, recursive_update=True):
@@ -28,49 +76,34 @@ class FileUpdater(ABC):
             start_index = self.start_index
         
         temp_folders = []
-            
+
         for cur_id, folder in enumerate(folders, start=start_index):
-            name_components = folder.name.split()
+            name = FolderName(folder.name)
+            name.index = cur_id
 
-            # Если у папки нет индекса
-            if re.match(r'\d+$', name_components[0]) is None:
-                name_components.insert(0, str(cur_id))
+            json_fps = folder.glob('*.json')
+            if not recursive_update and folder / 'meta.json' in json_fps:
+                from pronlib.update_meta import load_json
 
-            # Изменение индекса
-            if name_components[0] != str(cur_id):
-                name_components[0] = str(cur_id)
+                artist_name = load_json(folder / 'meta.json')['artist']
+                name.artist = artist_name.title()
 
             # Обновление подпапок
             if recursive_update:
-                child_files = self.get_files(folder)
+                child_files = self.get_subfolders(folder)
                 self.update_child_files(child_files)
-                self.change_total(name_components, child_files)
+                name.total = len(child_files)
 
-            new_name = ' '.join(name_components)
             # Сначала переименовываем в "новое имя_", потом в "новое имя"
             # чтобы избежать конфликтов, когда файл "новое имя" уже есть
-            temp_folders.append(folder.rename(folder.parent / (new_name+'_')))
+            temp_folders.append(folder.rename(folder.parent / (str(name)+'_')))
 
         for folder in temp_folders:
             folder.rename(folder.parent / folder.name[:-1])
-
-    @staticmethod
-    def change_total(name_components, child_files):
-        '''
-        Изменяет/добавляет последнюю строку в списке name_components, обозначающей колво файлов внутри папки (child_files - файлы папки)
-        '''
-        
-        amount_of_files = len(child_files)
-        new_total_str = f'({amount_of_files})'
-        
-        if re.match(r'\(.+\)', name_components[-1]):
-            name_components[-1] = new_total_str
-        else:
-            name_components.append(new_total_str)
             
-    def get_files(self, base_dir=None, childs_are_folders=None):
+    def get_subfolders(self, base_dir=None, childs_are_folders=None):
         '''
-        Получить список файлов в директории
+        Получить список папок в директории
         '''
         if base_dir is None:
             base_dir = self.base_dir
