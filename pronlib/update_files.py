@@ -1,5 +1,6 @@
 import re
 from abc import ABC, abstractmethod
+from typing import Tuple
 
 from natsort import natsorted
 
@@ -18,20 +19,32 @@ class FolderName:
         match = re.search(r'\(\d+\)', folder_name)
         if match:
             total = int(match.group(0)[1:-1])
-            folder_name = folder_name[:match.start()].strip()
+            folder_name = self.remove_range_from_str(
+                folder_name,
+                match.start(),
+                match.end(),
+            )
+            folder_name = re.sub(r' +', ' ', folder_name).strip()
 
         match = re.search(r'\[.+?\]', folder_name)
         artist = None
         if match:
-            artist = match.group(0)[1:-1]
-            folder_name = folder_name[:match.start()].strip()
-
-        title = folder_name.strip()
+            artist = match.group(0)[1:-1].strip()
+            folder_name = self.remove_range_from_str(
+                folder_name,
+                match.start(),
+                match.end(),
+            )
+            folder_name = re.sub(r' +', ' ', folder_name).strip()
 
         self.index: int = index
-        self.title: str = title
+        self.title: str = folder_name
         self.artist: str = artist
         self.total: int = total
+
+    @staticmethod
+    def remove_range_from_str(s: str, start: int, end: int) -> str:
+        return s[:start] + s[end:]
 
     def __str__(self):
         title = ''

@@ -168,7 +168,7 @@ def extract_artist_from_folder_name(folder_name: str):
     if meta_artist_match is None:
         return ''
     else:
-        return meta_artist_match.group(1).title()
+        return meta_artist_match.group(1).title().strip()
 
 
 def update_random_file(photos_dir, videos_dir, file_path='sauce.json'):
