@@ -9,6 +9,7 @@ packages = [{include = "pronlib_repo"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 natsort = "^8.2.0"
+mypy = "^1.7.0"
 
 
 [build-system]
