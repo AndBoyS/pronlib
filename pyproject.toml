@@ -1,3 +1,6 @@
+[tool.ruff]
+line-length = 120
+
 [tool.poetry]
 name = "pronlib-repo"
 version = "0.1.0"
