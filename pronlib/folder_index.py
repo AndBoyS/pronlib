@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 import json
 from pathlib import Path
 import re
+from typing import Type
 
 from natsort import natsorted
 
@@ -95,11 +96,23 @@ class MediaChapter(ABC):
     title: str
     index: int
     count: int
+    media_cls: Type[Media]
     media_list: list[Media]
 
-    @abstractmethod
     def __init__(self, chapter_path: Path, index: int) -> None:
-        pass
+        self.path = chapter_path
+        self.index = index
+
+        if not self.path.is_dir():
+            raise ValueError(f"{self.path} is not a dir, but its expected to be")
+
+        self.title = self.path.stem.replace("_temp", "")
+        self.title = re.sub(r"^\d+", "", self.title)
+        self.title = re.sub(r"\(\d+\)$", "", self.title).strip()
+
+        media_paths = natsorted(get_content_subfiles(self.path))
+        self.media_list = [self.media_cls(p, i) for i, p in enumerate(media_paths, start=1)]
+        self.count = len(self.media_list)
 
     def rename_to_temp(self) -> None:
         temp_path = self.path.with_name(f"{self.full_title}_temp")
@@ -115,37 +128,11 @@ class MediaChapter(ABC):
 
 
 class VideoChapter(MediaChapter):
-    def __init__(self, chapter_path: Path, index: int) -> None:
-        self.path = chapter_path
-        self.index = index
-
-        if not self.path.is_dir():
-            raise ValueError(f"{self.path} is not a dir, but its expected to be")
-
-        self.title = self.path.stem.replace("_temp", "")
-        self.title = re.sub(r"^\d+", "", self.title)
-        self.title = re.sub(r"\(\d+\)$", "", self.title).strip()
-
-        media_paths = natsorted(get_content_subfiles(self.path))
-        self.media_list = [Video(p, i) for i, p in enumerate(media_paths, start=1)]
-        self.count = len(self.media_list)
-
+    media_cls = Video
+    
 
 class PhotoChapter(MediaChapter):
-    def __init__(self, chapter_path: Path, index: int) -> None:
-        self.path = chapter_path
-        self.index = index
-
-        if not self.path.is_dir():
-            raise ValueError(f"{self.path} is not a dir, but its expected to be")
-
-        self.title = self.path.stem.replace("_temp", "")
-        self.title = re.sub(r"^\d+", "", self.title)
-        self.title = re.sub(r"\(\d+\)$", "", self.title).strip()
-
-        media_paths = natsorted(get_content_subfiles(self.path))
-        self.media_list = [PhotoFolder(p, i) for i, p in enumerate(media_paths, start=1)]
-        self.count = len(self.media_list)
+    media_cls = PhotoFolder
 
 
 def reindex_folders(chapters: list[MediaChapter]) -> None:
