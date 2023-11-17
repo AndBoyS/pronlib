@@ -6,11 +6,13 @@ from natsort import natsorted
 from pronlib.folder_index import MediaChapter, PhotoChapter, VideoChapter, get_subfolders, reindex_folders, save_sauce
 
 
-def main() -> None:
+def main(media_dir: Path | None = None, sauce_save_path: Path | None = None) -> None:
     repo_dir = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"]).decode().strip())
-    media_dir = repo_dir.parent / "Test"
-
-    sauce_save_path = repo_dir / "sauce.json"
+    
+    if media_dir is None:
+        media_dir = repo_dir.parent / "Test"
+    if sauce_save_path is None:
+        sauce_save_path = repo_dir / "sauce.json"
 
     video_path = media_dir / "Videos"
     photo_path = media_dir / "Photos"
