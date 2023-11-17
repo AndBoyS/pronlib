@@ -153,7 +153,6 @@ def reindex_folders(chapters: list[MediaChapter]) -> None:
         chapter.rename_update()
 
 
-def save_sauce(chapters: list[MediaChapter], save_path: Path | str) -> None:
+def get_sauce(chapters: list[MediaChapter]) -> dict[str, int]:
     sauce = {f"{chapter.index} {chapter.title}": chapter.count for chapter in chapters}
-    with open(save_path, "w", encoding="utf8") as f:
-        json.dump(sauce, f)
+    return sauce
