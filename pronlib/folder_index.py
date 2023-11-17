@@ -7,6 +7,10 @@ from typing import Type
 from natsort import natsorted
 
 
+counter_ptrn = re.compile(r"\(\d+\)$")
+index_ptrn = re.compile(r"^\d+")
+artist_ptrn = re.compile(r"\[(.+)\]$")
+
 def get_subfolders(path: Path) -> list[Path]:
     return [p for p in path.iterdir() if p.is_dir() and not p.name.startswith(".")]
 
@@ -44,7 +48,7 @@ class Video(Media):
         self.path = path
         self.index = index
         self.title = self.path.stem.replace("_temp", "")
-        self.title = re.sub(r"^\d+", "", self.title).strip()
+        self.title = index_ptrn.sub("", self.title).strip()
 
     @property
     def full_title(self) -> str:
@@ -61,13 +65,13 @@ class PhotoFolder(Media):
         self.path = path
         self.index = index
         self.title = self.path.stem.replace("_temp", "")
-        self.title = re.sub(r"^\d+", "", self.title)
+        self.title = index_ptrn.sub("", self.title)
         
         if not self.path.is_dir():
             raise ValueError(f"{self.path} is not a dir, but its expected to be")
 
         self.artist_name = None
-        artist_ptrn = re.compile(r"\[(.+)\]$")
+        
         artist_match = artist_ptrn.search(self.title)
         if artist_match is not None:
             self.artist_name = artist_match.group(1).title()
@@ -107,8 +111,8 @@ class MediaChapter(ABC):
             raise ValueError(f"{self.path} is not a dir, but its expected to be")
 
         self.title = self.path.stem.replace("_temp", "")
-        self.title = re.sub(r"^\d+", "", self.title)
-        self.title = re.sub(r"\(\d+\)$", "", self.title).strip()
+        self.title = index_ptrn.sub("", self.title)
+        self.title = counter_ptrn.sub("", self.title).strip()
 
         media_paths = natsorted(get_content_subfiles(self.path))
         self.media_list = [self.media_cls(p, i) for i, p in enumerate(media_paths, start=1)]
