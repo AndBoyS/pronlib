@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-import json
 from pathlib import Path
 import re
 from typing import Type
@@ -10,6 +9,7 @@ from natsort import natsorted
 counter_ptrn = re.compile(r"\(\d+\)$")
 index_ptrn = re.compile(r"^\d+")
 artist_ptrn = re.compile(r"\[(.+)\]$")
+
 
 def get_subfolders(path: Path) -> list[Path]:
     return [p for p in path.iterdir() if p.is_dir() and not p.name.startswith(".")]
@@ -23,7 +23,7 @@ class Media(ABC):
     path: Path
     title: str
     index: int
-    
+
     @abstractmethod
     def __init__(self, chapter_path: Path, index: int) -> None:
         pass
@@ -31,16 +31,15 @@ class Media(ABC):
     @abstractmethod
     def rename_to_temp(self) -> None:
         pass
-    
+
     @property
     @abstractmethod
     def full_title(self) -> str:
         pass
-    
-    def rename_update(self) -> None:
-        new_path = self.path.with_name(f'{self.full_title}{self.path.suffix}')
-        self.path = self.path.rename(new_path)
 
+    def rename_update(self) -> None:
+        new_path = self.path.with_name(f"{self.full_title}{self.path.suffix}")
+        self.path = self.path.rename(new_path)
 
 
 class Video(Media):
@@ -66,12 +65,12 @@ class PhotoFolder(Media):
         self.index = index
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title)
-        
+
         if not self.path.is_dir():
             raise ValueError(f"{self.path} is not a dir, but its expected to be")
 
         self.artist_name = None
-        
+
         artist_match = artist_ptrn.search(self.title)
         if artist_match is not None:
             self.artist_name = artist_match.group(1).title()
@@ -85,7 +84,7 @@ class PhotoFolder(Media):
             full_title = f"{full_title} [{self.artist_name}]"
 
         return full_title
-    
+
     def rename_to_temp(self) -> None:
         temp_path = self.path.with_name(f"{self.path.name}_temp")
         self.path = self.path.rename(temp_path)
@@ -133,14 +132,13 @@ class MediaChapter(ABC):
 
 class VideoChapter(MediaChapter):
     media_cls = Video
-    
+
 
 class PhotoChapter(MediaChapter):
     media_cls = PhotoFolder
 
 
 def reindex_folders(chapters: list[MediaChapter]) -> None:
-    
     for chapter in chapters:
         for media in chapter.media_list:
             media.rename_to_temp()
