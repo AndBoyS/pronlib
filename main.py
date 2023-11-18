@@ -34,7 +34,7 @@ def main(media_dir: Path, sauce_save_path: Path | None = None) -> dict[str, int]
 
 if __name__ == "__main__":
     repo_dir = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"]).decode().strip())
-    media_dir = repo_dir.parent / "Test"
+    media_dir = repo_dir.parent / "[Content]"
     sauce_save_path = repo_dir / "sauce.json"
 
     main(media_dir=media_dir, sauce_save_path=sauce_save_path)
