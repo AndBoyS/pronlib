@@ -6,11 +6,6 @@ from typing import Type
 from natsort import natsorted
 
 
-counter_ptrn = re.compile(r"\(\d+\)$")
-index_ptrn = re.compile(r"^\d+")
-artist_ptrn = re.compile(r"\[(.+)\]$")
-
-
 def get_subfolders(path: Path) -> list[Path]:
     return [p for p in path.iterdir() if p.is_dir() and not p.name.startswith(".")]
 
@@ -19,13 +14,24 @@ def get_content_subfiles(path: Path) -> list[Path]:
     return [p for p in path.iterdir() if p.name.lower() != "meta.json" and not p.name.startswith(".")]
 
 
+index_ptrn = re.compile(r"^\d+")
+
+
+def extract_index(path_name: str) -> int | None:
+    index = None
+    index_match = index_ptrn.search(path_name)
+    if index_match is not None:
+        index = int(index_match.group(0))
+    return index
+
+
 class Media(ABC):
     path: Path
     title: str
-    index: int
+    index: int | None
 
     @abstractmethod
-    def __init__(self, chapter_path: Path, index: int) -> None:
+    def __init__(self, chapter_path: Path) -> None:
         pass
 
     @abstractmethod
@@ -36,16 +42,16 @@ class Media(ABC):
     @abstractmethod
     def full_title(self) -> str:
         pass
+    
+    @abstractmethod
+    def rename_update(self, index: int) -> None:
+        pass
 
-    def rename_update(self) -> None:
-        new_path = self.path.with_name(f"{self.full_title}{self.path.suffix}")
-        self.path = self.path.rename(new_path)
-
-
+        
 class Video(Media):
-    def __init__(self, path: Path, index: int) -> None:
+    def __init__(self, path: Path) -> None:
         self.path = path
-        self.index = index
+        self.index = extract_index(self.path.name)
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title).strip()
 
@@ -57,12 +63,19 @@ class Video(Media):
         temp_name = f"{self.full_title}_temp{self.path.suffix}"
         temp_path = self.path.with_name(temp_name)
         self.path = self.path.rename(temp_path)
-
+        
+    def rename_update(self, index: int) -> None:
+        self.index = index
+        new_path = self.path.with_name(f"{self.full_title}{self.path.suffix}")
+        self.path = self.path.rename(new_path)
+        
 
 class PhotoFolder(Media):
-    def __init__(self, path: Path, index: int) -> None:
+    artist_ptrn = re.compile(r"\[(.+)\]$")
+
+    def __init__(self, path: Path) -> None:
         self.path = path
-        self.index = index
+        self.index = extract_index(self.path.name)
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title)
 
@@ -71,11 +84,11 @@ class PhotoFolder(Media):
 
         self.artist_name = None
 
-        artist_match = artist_ptrn.search(self.title)
+        artist_match = self.artist_ptrn.search(self.title)
         if artist_match is not None:
             self.artist_name = artist_match.group(1).title()
 
-        self.title = artist_ptrn.sub("", self.title).strip()
+        self.title = self.artist_ptrn.sub("", self.title).strip()
 
     @property
     def full_title(self) -> str:
@@ -89,7 +102,8 @@ class PhotoFolder(Media):
         temp_path = self.path.with_name(f"{self.path.name}_temp")
         self.path = self.path.rename(temp_path)
 
-    def rename_update(self) -> None:
+    def rename_update(self, index: int) -> None:
+        self.index = index
         new_path = self.path.with_name(self.full_title)
         self.path = self.path.rename(new_path)
 
@@ -97,31 +111,46 @@ class PhotoFolder(Media):
 class MediaChapter(ABC):
     path: Path
     title: str
-    index: int
-    count: int
+    index: int | None
+    count: int | None
     media_cls: Type[Media]
     media_list: list[Media]
+    counter_ptrn = re.compile(r"\((\d+)\)$")
 
-    def __init__(self, chapter_path: Path, index: int) -> None:
+    def __init__(self, chapter_path: Path) -> None:
         self.path = chapter_path
-        self.index = index
 
         if not self.path.is_dir():
             raise ValueError(f"{self.path} is not a dir, but its expected to be")
 
-        self.title = self.path.stem.replace("_temp", "")
-        self.title = index_ptrn.sub("", self.title)
-        self.title = counter_ptrn.sub("", self.title).strip()
+        self.index = extract_index(self.path.name)
+        self.title = self.extract_title()
+        self.count = self.extract_count()
 
         media_paths = natsorted(get_content_subfiles(self.path))
-        self.media_list = [self.media_cls(p, i) for i, p in enumerate(media_paths, start=1)]
-        self.count = len(self.media_list)
+        self.media_list = [self.media_cls(p) for p in media_paths]
+
+    def extract_count(self) -> int | None:
+        count = None
+        count_match = self.counter_ptrn.search(self.path.stem)
+        if count_match is not None:
+            count = int(count_match.group(1))
+        return count
+
+    def extract_title(self) -> str:
+        title = self.path.stem.replace("_temp", "")
+        title = index_ptrn.sub("", title)
+        title = self.counter_ptrn.sub("", title).strip()
+        return title
 
     def rename_to_temp(self) -> None:
         temp_path = self.path.with_name(f"{self.full_title}_temp")
         self.path = self.path.rename(temp_path)
 
-    def rename_update(self) -> None:
+    def rename_update(self, index: int) -> None:
+        self.count = len(self.media_list)
+        self.index = index
+
         new_path = self.path.with_name(self.full_title)
         self.path = self.path.rename(new_path)
 
@@ -138,19 +167,19 @@ class PhotoChapter(MediaChapter):
     media_cls = PhotoFolder
 
 
-def reindex_folders(chapters: list[MediaChapter]) -> None:
+def reindex_folders(chapters: list[MediaChapter], start_index: int = 1) -> None:
     for chapter in chapters:
         for media in chapter.media_list:
             media.rename_to_temp()
-        for media in chapter.media_list:
-            media.rename_update()
+        for i, media in enumerate(chapter.media_list, start=1):
+            media.rename_update(i)
 
     for chapter in chapters:
         chapter.rename_to_temp()
-    for chapter in chapters:
-        chapter.rename_update()
+    for i, chapter in enumerate(chapters, start=start_index):
+        chapter.rename_update(i)
 
 
-def get_sauce(chapters: list[MediaChapter]) -> dict[str, int]:
+def get_sauce(chapters: list[MediaChapter]) -> dict[str, int | None]:
     sauce = {f"{chapter.index} {chapter.title}": chapter.count for chapter in chapters}
     return sauce
