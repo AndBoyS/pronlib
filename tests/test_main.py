@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil
-from typing import Generator
+from typing import Iterator
 
 import pytest
 from main import main
@@ -37,7 +37,7 @@ expected_media_names = [
 
 
 @pytest.fixture
-def test_data_dir() -> Generator[Path, None, None]:
+def test_data_dir() -> Iterator[Path]:
     media_dir_original = Path(__file__).parent / "test_media"
     media_dir = Path(__file__).parent / "test_media_copy"
     shutil.copytree(media_dir_original, media_dir)
