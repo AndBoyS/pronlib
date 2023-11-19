@@ -181,5 +181,5 @@ def reindex_folders(chapters: list[MediaChapter], start_index: int = 1) -> None:
 
 
 def get_sauce(chapters: list[MediaChapter]) -> dict[str, int | None]:
-    sauce = {f"{chapter.index} {chapter.title}": chapter.count for chapter in chapters}
+    sauce = {f"{chapter.title}": chapter.count for chapter in chapters}
     return sauce

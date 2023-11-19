@@ -5,7 +5,7 @@ from typing import Iterator
 import pytest
 from main import main
 
-expected_sauce = {"1 Eroge!": 3, "2 Honoo no Oppai": 4, "3 Honoo Haramase Appli": 5, "4 M1": 6}
+expected_sauce = {"Eroge!": 3, "Honoo no Oppai": 4, "Honoo Haramase Appli": 5, "M1": 6}
 
 expected_media_names = [
     "Videos",
