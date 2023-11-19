@@ -37,16 +37,20 @@ expected_media_names = [
 
 
 @pytest.fixture
-def test_data_dir() -> Iterator[Path]:
+def video_and_photo_paths() -> Iterator[tuple[Path, Path]]:
     media_dir_original = Path(__file__).parent / "test_media"
-    media_dir = Path(__file__).parent / "test_media_copy"
+    media_dir = media_dir_original.with_name("test_media_copy")
     shutil.copytree(media_dir_original, media_dir)
-    yield media_dir
+    yield media_dir / "Videos", media_dir / "Photos"
     shutil.rmtree(media_dir)
 
 
-def test_rename_and_sauce(test_data_dir: Path) -> None:
-    sauce = main(test_data_dir)
+def test_rename_and_sauce(video_and_photo_paths: tuple[Path, Path]) -> None:
+    video_path, photo_path = video_and_photo_paths
+    media_path = video_path.parent
+
+    assert video_path.parent == photo_path.parent, "Same parent for video and photo expected"
+    sauce = main(video_path=video_path, photo_path=photo_path)
     assert sauce == expected_sauce
-    media_names = [p.name for p in test_data_dir.rglob("*") if not p.name.startswith(".")]
+    media_names = [p.name for p in media_path.rglob("*") if not p.name.startswith(".")]
     assert set(expected_media_names) == set(media_names)
