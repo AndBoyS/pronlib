@@ -5,6 +5,7 @@ from natsort import natsorted
 from pronlib.constants import PHOTO_PATH, SAUCE_PATH, VIDEO_PATH
 
 from pronlib.folder_index import MediaChapter, PhotoChapter, VideoChapter, get_subfolders, reindex_folders, get_sauce
+from pronlib.utils import dump_json
 
 
 def main(video_path: Path, photo_path: Path, sauce_save_path: Path | None = None) -> dict[str, int | None]:
@@ -21,8 +22,7 @@ def main(video_path: Path, photo_path: Path, sauce_save_path: Path | None = None
     sauce = get_sauce(video_chapters + photo_chapters)
 
     if sauce_save_path is not None:
-        with open(sauce_save_path, "w", encoding="utf8") as f:
-            json.dump(sauce, f)
+        dump_json(sauce, sauce_save_path)
 
     return sauce
 
