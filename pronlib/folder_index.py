@@ -50,6 +50,9 @@ class Media(ABC):
     @abstractmethod
     def rename_update(self, index: int) -> None:
         pass
+    
+    def __repr__(self) -> str:
+        return f'{type(self).__name__}(title={self.title})'
 
         
 class Video(Media):
@@ -169,6 +172,9 @@ class MediaChapter(ABC):
     @property
     def full_title(self) -> str:
         return f"{self.index} {self.title} ({self.count})".strip()
+
+    def __repr__(self) -> str:
+        return f'{type(self).__name__}(title={self.title})'
 
 
 class VideoChapter(MediaChapter):
