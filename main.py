@@ -9,14 +9,13 @@ from pronlib.utils import dump_json
 
 def main(video_path: Path, photo_path: Path, sauce_save_path: Path | None = None) -> dict[str, int | None]:
     video_folders = natsorted(get_subfolders(video_path))
-    num_videos = len(video_folders)
     photo_folders = natsorted(get_subfolders(photo_path))
 
     video_chapters: list[MediaChapter] = [VideoChapter(path) for path in video_folders]
     photo_chapters: list[MediaChapter] = [PhotoChapter(path) for path in photo_folders]
 
     reindex_folders(video_chapters)
-    reindex_folders(photo_chapters, start_index=num_videos + 1)
+    reindex_folders(photo_chapters)
 
     sauce = get_sauce(video_chapters + photo_chapters)
 
