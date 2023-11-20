@@ -5,6 +5,9 @@ from typing import Type
 
 from natsort import natsorted
 
+from pronlib.constants import META_NAME
+from pronlib.utils import load_json
+
 
 def get_subfolders(path: Path) -> list[Path]:
     return [p for p in path.iterdir() if p.is_dir() and not p.name.startswith(".")]
@@ -29,6 +32,7 @@ class Media(ABC):
     path: Path
     title: str
     index: int | None
+    meta: dict[str, str] | None = None
 
     @abstractmethod
     def __init__(self, chapter_path: Path) -> None:
@@ -89,6 +93,14 @@ class PhotoFolder(Media):
             self.artist_name = artist_match.group(1).title()
 
         self.title = self.artist_ptrn.sub("", self.title).strip()
+
+        self.meta = None
+        if self.meta_path.exists():
+            self.meta = load_json(self.meta_path)
+        
+    @property
+    def meta_path(self) -> Path:
+        return self.path / META_NAME
 
     @property
     def full_title(self) -> str:
