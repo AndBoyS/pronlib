@@ -6,9 +6,9 @@ DEBUG = True
 REPO_PATH = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"]).decode().strip())
 
 if DEBUG:
-    MEDIA_PATH = REPO_PATH / 'tests/test_media'
+    MEDIA_PATH = REPO_PATH / "tests/test_media"
 else:
-    MEDIA_PATH = REPO_PATH.parent / '[Content]'
+    MEDIA_PATH = REPO_PATH.parent / "[Content]"
 
 VIDEO_PATH = MEDIA_PATH / "Videos"
 PHOTO_PATH = MEDIA_PATH / "Photos"

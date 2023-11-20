@@ -46,15 +46,15 @@ class Media(ABC):
     @abstractmethod
     def full_title(self) -> str:
         pass
-    
+
     @abstractmethod
     def rename_update(self, index: int) -> None:
         pass
-    
-    def __repr__(self) -> str:
-        return f'{type(self).__name__}(title={self.title})'
 
-        
+    def __repr__(self) -> str:
+        return f"{type(self).__name__}(title={self.title})"
+
+
 class Video(Media):
     def __init__(self, path: Path) -> None:
         self.path = path
@@ -70,12 +70,12 @@ class Video(Media):
         temp_name = f"{self.full_title}_temp{self.path.suffix}"
         temp_path = self.path.with_name(temp_name)
         self.path = self.path.rename(temp_path)
-        
+
     def rename_update(self, index: int) -> None:
         self.index = index
         new_path = self.path.with_name(f"{self.full_title}{self.path.suffix}")
         self.path = self.path.rename(new_path)
-        
+
 
 class PhotoFolder(Media):
     artist_ptrn = re.compile(r"\[(.+)\]$")
@@ -100,7 +100,7 @@ class PhotoFolder(Media):
         self.meta = None
         if self.meta_path.exists():
             self.meta = load_json(self.meta_path)
-        
+
     @property
     def meta_path(self) -> Path:
         return self.path / META_NAME
@@ -174,7 +174,7 @@ class MediaChapter(ABC):
         return f"{self.index} {self.title} ({self.count})".strip()
 
     def __repr__(self) -> str:
-        return f'{type(self).__name__}(title={self.title})'
+        return f"{type(self).__name__}(title={self.title})"
 
 
 class VideoChapter(MediaChapter):
