@@ -14,7 +14,7 @@ def get_subfolders(path: Path) -> list[Path]:
 
 
 def get_content_subfiles(path: Path) -> list[Path]:
-    return [p for p in path.iterdir() if p.name.lower() != "meta.json" and not p.name.startswith(".")]
+    return [p for p in path.iterdir() if p.name.lower() != META_NAME and not p.name.startswith(".")]
 
 
 index_ptrn = re.compile(r"^\d+")
