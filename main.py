@@ -1,24 +1,29 @@
 from pathlib import Path
 
-from pronlib.update_files import PhotoUpdater, VideoUpdater
-from pronlib.update_meta import update_meta_files, update_random_file
+from natsort import natsorted
+from pronlib.constants import PHOTO_PATH, SAUCE_PATH, VIDEO_PATH
+
+from pronlib.folder_index import MediaChapter, PhotoChapter, VideoChapter, get_subfolders, reindex_folders, get_sauce
+from pronlib.utils import dump_json
 
 
-def main():
-    base_dir = Path().resolve().parent / '[Content]'
-    photos_dir = base_dir / 'Photos'
-    videos_dir = base_dir / 'Videos'
+def main(video_path: Path, photo_path: Path, sauce_save_path: Path | None = None) -> dict[str, int | None]:
+    video_folders = natsorted(get_subfolders(video_path))
+    photo_folders = natsorted(get_subfolders(photo_path))
 
-    video_updater = VideoUpdater(videos_dir, start_index=1)
-    photo_start_index = len(video_updater.get_subfolders()) + 1
-    photo_updater = PhotoUpdater(photos_dir, photo_start_index)
+    video_chapters: list[MediaChapter] = [VideoChapter(path) for path in video_folders]
+    photo_chapters: list[MediaChapter] = [PhotoChapter(path) for path in photo_folders]
 
-    photo_updater.update()
-    video_updater.update()
+    reindex_folders(video_chapters)
+    reindex_folders(photo_chapters)
 
-    update_random_file(photos_dir, videos_dir)
-    update_meta_files(photos_dir)
+    sauce = get_sauce(video_chapters + photo_chapters)
+
+    if sauce_save_path is not None:
+        dump_json(sauce, sauce_save_path)
+
+    return sauce
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    main(video_path=VIDEO_PATH, photo_path=PHOTO_PATH, sauce_save_path=SAUCE_PATH)
