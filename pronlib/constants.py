@@ -2,7 +2,7 @@ from pathlib import Path
 import subprocess
 
 
-DEBUG = True
+DEBUG = False
 REPO_PATH = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"]).decode().strip())
 
 if DEBUG:
