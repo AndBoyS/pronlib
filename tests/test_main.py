@@ -22,17 +22,27 @@ expected_media_names = [
     "1 Honoo Haramase Appli (5)",
     "2 M1 (6)",
     "1",
+    "horny_photo.txt",
     "4",
+    "horny_photo.txt",
     "3",
+    "horny_photo.txt",
     "2",
+    "horny_photo.txt",
     "5",
-    "meta.json",
+    "horny_photo.txt",
     "3 Ikinari Kozukuri [Goban]",
+    "horny_photo.txt",
     "2 Scarlet princess Rias Daisuki [Izumi Mahiru]",
+    "horny_photo.txt",
     "4 Hokorashiki Goshujin-sama [Morimoto Seina, Crowly]",
+    "horny_photo.txt",
     "1 Maoo Wonderful [Izumi Mahiru]",
+    "horny_photo.txt",
     "5 Gimme Attention! Doggy x2 Girls [Minamino Sazan]",
+    "horny_photo.txt",
     "6 Blossoming Sakura! [Kakao]",
+    "horny_photo.txt",
 ]
 
 
@@ -53,4 +63,4 @@ def test_rename_and_sauce(video_and_photo_paths: tuple[Path, Path]) -> None:
     sauce = main(video_path=video_path, photo_path=photo_path)
     assert sauce == expected_sauce
     media_names = [p.name for p in media_path.rglob("*") if not p.name.startswith(".")]
-    assert set(expected_media_names) == set(media_names)
+    assert sorted(expected_media_names) == sorted(media_names)
