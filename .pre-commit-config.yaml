@@ -14,3 +14,12 @@ repos:
     hooks:
     # Run the formatter.
     -   id: ruff-format
+
+-   repo: local
+    hooks:
+    -   id: pytest-check
+        name: pytest-check
+        entry: .venv/bin/pytest
+        language: script
+        pass_filenames: false
+        always_run: true
