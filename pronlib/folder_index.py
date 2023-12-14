@@ -78,7 +78,7 @@ class Video(Media):
 
 
 class PhotoFolder(Media):
-    artist_ptrn = re.compile(r"\[(.+)\]$")
+    artist_ptrn = re.compile(r"\[(.+)\]")
 
     def __init__(self, path: Path) -> None:
         self.path = path
