@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
 cd $SCRIPT_DIR
-poetry run python3 main.py
+poetry run python3 update_indexes.py
 
 git add .
 git commit -m "bump"

@@ -5,8 +5,8 @@ from typing import Type
 
 from natsort import natsorted
 
-from pronlib.constants import META_NAME
-from pronlib.utils import load_json
+from src.const import META_NAME
+from .utils import load_json
 
 
 def get_subfolders(path: Path) -> list[Path]:

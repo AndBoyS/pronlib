@@ -1,10 +1,17 @@
 from pathlib import Path
 
 from natsort import natsorted
-from pronlib.constants import DEBUG, PHOTO_PATH, SAUCE_PATH, VIDEO_PATH
+from src.const import DEBUG, PHOTO_PATH, SAUCE_PATH, VIDEO_PATH
 
-from pronlib.folder_index import MediaChapter, PhotoChapter, VideoChapter, get_subfolders, reindex_folders, get_sauce
-from pronlib.utils import dump_json
+from src.media_indexing.folder_index import (
+    MediaChapter,
+    PhotoChapter,
+    VideoChapter,
+    get_subfolders,
+    reindex_folders,
+    get_sauce,
+)
+from src.media_indexing.utils import dump_json
 
 
 def main(video_path: Path, photo_path: Path, sauce_save_path: Path | None = None) -> dict[str, int | None]:

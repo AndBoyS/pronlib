@@ -3,7 +3,7 @@ import shutil
 from typing import Iterator
 
 import pytest
-from main import main
+from update_indexes import main
 
 expected_sauce = {"Eroge!": 3, "Honoo no Oppai": 4, "Honoo Haramase Appli": 5, "M1": 6}
 
