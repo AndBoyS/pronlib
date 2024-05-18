@@ -55,7 +55,7 @@ def video_and_photo_paths() -> Iterator[tuple[Path, Path]]:
     shutil.rmtree(media_dir)
 
 
-def test_rename_and_sauce(video_and_photo_paths: tuple[Path, Path]) -> None:
+def test_update_indexes(video_and_photo_paths: tuple[Path, Path]) -> None:
     video_path, photo_path = video_and_photo_paths
     media_path = video_path.parent
 
