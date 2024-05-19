@@ -7,8 +7,8 @@ from src.const import PHOTO_PATH, VIDEO_PATH
 
 
 @click.command()
-@click.option("--no-reset", "is_reset", flag_value=False, default=True)
-@click.option("--reset", "is_reset", flag_value=True)
+@click.option("--no-reset", "is_reset", flag_value=False, default=True, help="Don't reset the cache (default)")
+@click.option("--reset", "is_reset", flag_value=True, help="Reset the cache")
 def pronapp(is_reset: bool) -> None:
     if is_reset:
         APP_CACHE_PATH.unlink(missing_ok=True)
