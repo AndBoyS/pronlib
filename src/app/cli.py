@@ -1,5 +1,4 @@
 import subprocess
-from typing import NoReturn
 import click
 
 from src.app.const import APP_CACHE_PATH
@@ -8,7 +7,13 @@ from src.const import PHOTO_PATH, VIDEO_PATH
 
 
 @click.command()
-def pronapp() -> NoReturn:
+@click.option("--no-reset", "is_reset", flag_value=False, default=True)
+@click.option("--reset", "is_reset", flag_value=True)
+def pronapp(is_reset: bool) -> None:
+    if is_reset:
+        APP_CACHE_PATH.unlink(missing_ok=True)
+        return
+
     cmds_cache = Cache(APP_CACHE_PATH)
 
     medias = get_all_media(video_path=VIDEO_PATH, photo_path=PHOTO_PATH)
