@@ -17,7 +17,7 @@ def generate_open_cmds() -> list[str]:
         if isinstance(media, Video):
             cmd = OPEN_VIDEO_CMD.replace("{path}", str(media.path))
         else:
-            first_photo = natsorted(media.path.iterdir())[0]
+            first_photo = next((p for p in media.path.iterdir() if p.suffix != ".json"))
             cmd = OPEN_PHOTO_CMD.replace("{path}", str(first_photo))
         cmds.append(cmd)
 
