@@ -3,7 +3,7 @@ from natsort import natsorted
 
 from src.app.const import OPEN_PHOTO_CMD, OPEN_VIDEO_CMD
 from src.const import PHOTO_PATH, VIDEO_PATH
-from src.media_indexing.folder_index import Video, get_chapters
+from src.media_indexing.folder_index import PhotoChapter, Video, get_chapters
 
 
 def generate_open_cmds() -> list[str]:
@@ -17,8 +17,7 @@ def generate_open_cmds() -> list[str]:
         if isinstance(media, Video):
             cmd = OPEN_VIDEO_CMD.replace("{path}", str(media.path))
         else:
-            first_photo = next((p for p in media.path.iterdir() if p.suffix != ".json"))
-            cmd = OPEN_PHOTO_CMD.replace("{path}", str(first_photo))
+            cmd = OPEN_PHOTO_CMD.replace("{path}", str(media.first_file_path))
         cmds.append(cmd)
 
     return cmds

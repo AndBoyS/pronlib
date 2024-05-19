@@ -33,6 +33,7 @@ class Media(ABC):
     title: str
     index: int | None
     meta: dict[str, str] | None = None
+    first_file_path: Path
 
     @abstractmethod
     def __init__(self, chapter_path: Path) -> None:
@@ -61,6 +62,7 @@ class Video(Media):
         self.index = extract_index(self.path.name)
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title).strip()
+        self.first_file_path = path
 
     @property
     def full_title(self) -> str:
@@ -85,6 +87,7 @@ class PhotoFolder(Media):
         self.index = extract_index(self.path.name)
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title)
+        self.first_file_path = natsorted(self.path.iterdir())[0]
 
         if not self.path.is_dir():
             raise ValueError(f"{self.path} is not a dir, but its expected to be")
