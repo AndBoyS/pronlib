@@ -185,6 +185,16 @@ class PhotoChapter(MediaChapter):
     media_cls = PhotoFolder
 
 
+def get_chapters(video_path: Path, photo_path: Path) -> tuple[list[MediaChapter], list[MediaChapter]]:
+    video_folders = natsorted(get_subfolders(video_path))
+    photo_folders = natsorted(get_subfolders(photo_path))
+
+    video_chapters: list[MediaChapter] = [VideoChapter(path) for path in video_folders]
+    photo_chapters: list[MediaChapter] = [PhotoChapter(path) for path in photo_folders]
+
+    return video_chapters, photo_chapters
+
+
 def reindex_folders(chapters: list[MediaChapter], start_index: int = 1) -> None:
     for chapter in chapters:
         for media in chapter.media_list:

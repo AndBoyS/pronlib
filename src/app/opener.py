@@ -3,15 +3,11 @@ from natsort import natsorted
 
 from src.app.const import OPEN_PHOTO_CMD, OPEN_VIDEO_CMD
 from src.const import PHOTO_PATH, VIDEO_PATH
-from src.media_indexing.folder_index import MediaChapter, PhotoChapter, Video, VideoChapter, get_subfolders
+from src.media_indexing.folder_index import Video, get_chapters
 
 
 def generate_open_cmds() -> list[str]:
-    video_folders = natsorted(get_subfolders(VIDEO_PATH))
-    photo_folders = natsorted(get_subfolders(PHOTO_PATH))
-
-    video_chapters: list[MediaChapter] = [VideoChapter(path) for path in video_folders]
-    photo_chapters: list[MediaChapter] = [PhotoChapter(path) for path in photo_folders]
+    video_chapters, photo_chapters = get_chapters(VIDEO_PATH, PHOTO_PATH)
 
     chapters = video_chapters + photo_chapters
     medias = [media for chapter in chapters for media in chapter.media_list]
