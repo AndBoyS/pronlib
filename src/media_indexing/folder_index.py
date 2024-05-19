@@ -87,7 +87,7 @@ class PhotoFolder(Media):
         self.index = extract_index(self.path.name)
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title)
-        self.first_file_path = natsorted(self.path.iterdir())[0]
+        self.first_file_path = natsorted([p for p in self.path.iterdir() if p.suffix != ".json"])[0]
 
         if not self.path.is_dir():
             raise ValueError(f"{self.path} is not a dir, but its expected to be")
