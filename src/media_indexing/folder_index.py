@@ -6,7 +6,7 @@ from typing import Type
 from natsort import natsorted
 
 from src.const import META_NAME
-from .utils import load_json
+from ..utils import load_json
 
 
 def get_subfolders(path: Path) -> list[Path]:

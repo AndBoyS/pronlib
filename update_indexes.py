@@ -11,7 +11,7 @@ from src.media_indexing.folder_index import (
     reindex_folders,
     get_sauce,
 )
-from src.media_indexing.utils import dump_json
+from src.utils import dump_json
 
 
 def main(video_path: Path, photo_path: Path, sauce_save_path: Path | None = None) -> dict[str, int | None]:
