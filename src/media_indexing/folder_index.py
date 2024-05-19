@@ -5,6 +5,7 @@ from typing import Type
 
 from natsort import natsorted
 
+from src.app.const import OPEN_PHOTO_CMD, OPEN_VIDEO_CMD
 from src.const import META_NAME
 from ..utils import load_json
 
@@ -33,7 +34,7 @@ class Media(ABC):
     title: str
     index: int | None
     meta: dict[str, str] | None = None
-    first_file_path: Path
+    open_cmd: str
 
     @abstractmethod
     def __init__(self, chapter_path: Path) -> None:
@@ -55,6 +56,14 @@ class Media(ABC):
     def __repr__(self) -> str:
         return f"{type(self).__name__}(title={self.title})"
 
+    def __eq__(self, value: object) -> bool:
+        if not isinstance(value, Media):
+            raise NotImplementedError
+        return self.path == value.path
+
+    def __hash__(self) -> int:
+        return hash(self.path)
+
 
 class Video(Media):
     def __init__(self, path: Path) -> None:
@@ -62,7 +71,7 @@ class Video(Media):
         self.index = extract_index(self.path.name)
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title).strip()
-        self.first_file_path = path
+        self.open_cmd = OPEN_VIDEO_CMD.replace("{path}", str(path))
 
     @property
     def full_title(self) -> str:
@@ -87,7 +96,8 @@ class PhotoFolder(Media):
         self.index = extract_index(self.path.name)
         self.title = self.path.stem.replace("_temp", "")
         self.title = index_ptrn.sub("", self.title)
-        self.first_file_path = natsorted([p for p in self.path.iterdir() if p.suffix != ".json"])[0]
+        first_file_path = natsorted([p for p in self.path.iterdir() if p.suffix != ".json"])[0]
+        self.open_cmd = OPEN_PHOTO_CMD.replace("{path}", str(first_file_path))
 
         if not self.path.is_dir():
             raise ValueError(f"{self.path} is not a dir, but its expected to be")

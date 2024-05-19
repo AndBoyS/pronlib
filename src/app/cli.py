@@ -2,7 +2,7 @@ import subprocess
 import click
 
 from src.app.const import APP_CACHE_PATH
-from src.app.opener import Cache, get_all_media, get_random_open_cmd
+from src.app.opener import Cache, get_all_media, get_random_media
 from src.const import PHOTO_PATH, VIDEO_PATH
 
 
@@ -14,13 +14,14 @@ def pronapp(is_reset: bool) -> None:
         APP_CACHE_PATH.unlink(missing_ok=True)
         return
 
-    cmds_cache = Cache(APP_CACHE_PATH)
+    media_cache = Cache(APP_CACHE_PATH)
 
     medias = get_all_media(video_path=VIDEO_PATH, photo_path=PHOTO_PATH)
     while True:
         click.confirm(text="Press anything to open the next sauce", show_default=False)
-        cmd = get_random_open_cmd(medias=medias, cmds_cache=cmds_cache)
-        subprocess.call(cmd, shell=True)
+        media = get_random_media(medias=medias, media_cache=media_cache)
+        click.echo(f"{media.title} ({len(media_cache)}/{len(medias)})")
+        subprocess.call(media.open_cmd, shell=True)
 
 
 if __name__ == "__main__":
