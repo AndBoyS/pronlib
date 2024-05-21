@@ -3,7 +3,7 @@ import shutil
 from typing import Iterator
 
 import pytest
-from main import main
+from update_indexes import main
 
 expected_sauce = {"Eroge!": 3, "Honoo no Oppai": 4, "Honoo Haramase Appli": 5, "M1": 6}
 
@@ -55,7 +55,7 @@ def video_and_photo_paths() -> Iterator[tuple[Path, Path]]:
     shutil.rmtree(media_dir)
 
 
-def test_rename_and_sauce(video_and_photo_paths: tuple[Path, Path]) -> None:
+def test_update_indexes(video_and_photo_paths: tuple[Path, Path]) -> None:
     video_path, photo_path = video_and_photo_paths
     media_path = video_path.parent
 

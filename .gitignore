@@ -1,3 +1,6 @@
+src/app/.app_cache.pkl
+src/app/.app_cache_debug.pkl
+
 ### VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
