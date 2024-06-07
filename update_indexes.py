@@ -16,7 +16,8 @@ def main(video_path: Path, photo_path: Path, sauce_save_path: Path | None = None
     reindex_folders(video_chapters)
     reindex_folders(photo_chapters)
 
-    sauce = get_sauce(video_chapters + photo_chapters)
+    chapters = video_chapters + photo_chapters
+    sauce = get_sauce(chapters)
 
     if sauce_save_path is not None:
         dump_json(sauce, sauce_save_path)

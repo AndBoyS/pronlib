@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from pathlib import Path
 import re
-from typing import Type
+from typing import Collection, Iterable, Type
 
 from natsort import natsorted
 
@@ -102,7 +102,7 @@ class PhotoFolder(Media):
         if not self.path.is_dir():
             raise ValueError(f"{self.path} is not a dir, but its expected to be")
 
-        self.artist_name = None
+        self.artist_name: str | None = None
 
         artist_match = self.artist_ptrn.search(self.title)
         if artist_match is not None:
@@ -142,7 +142,7 @@ class MediaChapter(ABC):
     index: int | None
     count: int | None
     media_cls: Type[Media]
-    media_list: list[Media]
+    media_list: Collection[Media]
     counter_ptrn = re.compile(r"\((\d+)\)$")
 
     def __init__(self, chapter_path: Path) -> None:
@@ -192,23 +192,25 @@ class MediaChapter(ABC):
 
 class VideoChapter(MediaChapter):
     media_cls = Video
+    media_list: Collection[Video]
 
 
 class PhotoChapter(MediaChapter):
     media_cls = PhotoFolder
+    media_list: Collection[PhotoFolder]
 
 
-def get_chapters(video_path: Path, photo_path: Path) -> tuple[list[MediaChapter], list[MediaChapter]]:
+def get_chapters(video_path: Path, photo_path: Path) -> tuple[list[VideoChapter], list[PhotoChapter]]:
     video_folders = natsorted(get_subfolders(video_path))
     photo_folders = natsorted(get_subfolders(photo_path))
 
-    video_chapters: list[MediaChapter] = [VideoChapter(path) for path in video_folders]
-    photo_chapters: list[MediaChapter] = [PhotoChapter(path) for path in photo_folders]
+    video_chapters = [VideoChapter(path) for path in video_folders]
+    photo_chapters = [PhotoChapter(path) for path in photo_folders]
 
     return video_chapters, photo_chapters
 
 
-def reindex_folders(chapters: list[MediaChapter], start_index: int = 1) -> None:
+def reindex_folders(chapters: Iterable[MediaChapter], start_index: int = 1) -> None:
     for chapter in chapters:
         for media in chapter.media_list:
             media.rename_to_temp()
@@ -221,6 +223,6 @@ def reindex_folders(chapters: list[MediaChapter], start_index: int = 1) -> None:
         chapter.rename_update(i)
 
 
-def get_sauce(chapters: list[MediaChapter]) -> dict[str, int | None]:
+def get_sauce(chapters: Iterable[MediaChapter]) -> dict[str, int | None]:
     sauce = {f"{chapter.title}": chapter.count for chapter in chapters}
     return sauce

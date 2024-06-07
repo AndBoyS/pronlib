@@ -3,7 +3,7 @@ import functools
 from pathlib import Path
 import pickle
 import random
-from natsort import natsorted
+from typing import Collection
 
 from src.media_indexing.folder_index import Media, get_chapters
 
@@ -48,7 +48,7 @@ class Cache:
         return len(self.cache)
 
 
-def get_all_media(video_path: Path, photo_path: Path) -> list[Media]:
+def get_all_media(video_path: Path, photo_path: Path) -> Collection[Media]:
     video_chapters, photo_chapters = get_chapters(video_path=video_path, photo_path=photo_path)
 
     chapters = video_chapters + photo_chapters
@@ -56,7 +56,7 @@ def get_all_media(video_path: Path, photo_path: Path) -> list[Media]:
     return medias
 
 
-def leave_uncached_media(medias: list[Media], media_cache: Cache) -> list[Media]:
+def leave_uncached_media(medias: Collection[Media], media_cache: Cache) -> Collection[Media]:
     uncached_medias = list(set(medias) - media_cache.cache)
 
     if not uncached_medias:
@@ -66,9 +66,9 @@ def leave_uncached_media(medias: list[Media], media_cache: Cache) -> list[Media]
     return uncached_medias
 
 
-def get_random_media(medias: list[Media], media_cache: Cache) -> Media:
+def get_random_media(medias: Collection[Media], media_cache: Cache) -> Media:
     medias = leave_uncached_media(medias=medias, media_cache=media_cache)
-    media = random.choice(medias)
+    media = random.choice(list(medias))
     media_cache.add_new_el(media)
 
     return media
